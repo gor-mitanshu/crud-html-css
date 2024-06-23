@@ -1,3 +1,16 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "89a7",
+      "firstname": "Mitanshu",
+      "lastname": "Gor",
+      "email": "gor.mitanshu3@gmail.com",
+      "phone": "09558993690",
+      "hobbies": "Reading",
+      "gender": "Male",
+      "education": [
+        "Bachelor's"
+      ]
+    }
+  ]
 }
