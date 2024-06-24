@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ConfirmDialog from './ConfirmDialog';
+import ConfirmDialog from '../ui/dialog/ConfirmDialog';
 import axios from 'axios';
 
 const Table = ({ data, fetchData, openModal }) => {

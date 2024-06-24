@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Form from './components/Form';
 import Table from './components/Table';
-import Modal from './components/Modal';
+import Modal from './ui/modal/Modal';
 import './App.css';
 
 const App = () => {
