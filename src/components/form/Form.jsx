@@ -34,15 +34,19 @@ const Form = ({ fetchData, currentUser, closeModal }) => {
 
           switch (name) {
                case 'firstname':
+                    if (!value) error = 'Firstname is required';
+                    else if (!/^[A-Za-z]+$/.test(value)) error = "Please enter a valid Firstname";
+                    break;
                case 'lastname':
-                    if (!value) error = 'This field is required';
+                    if (!value) error = 'Lastname is required';
+                    else if (!/^[A-Za-z]+$/.test(value)) error = "Please enter a valid lastname";
                     break;
                case 'email':
-                    if (!value) error = 'This field is required';
+                    if (!value) error = 'Email is required';
                     else if (!/\S+@\S+\.\S+/.test(value)) error = 'Email is invalid';
                     break;
                case 'phone':
-                    if (!value) error = 'This field is required';
+                    if (!value) error = 'Phone is required';
                     else if (!/^\d+$/.test(value)) error = 'Phone number is invalid';
                     break;
                default:
