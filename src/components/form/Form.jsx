@@ -52,7 +52,6 @@ const Form = ({ fetchData, currentUser, closeModal }) => {
                default:
                     break;
           }
-
           return error;
      };
 
