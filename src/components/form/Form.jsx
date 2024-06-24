@@ -1,19 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Form.css';
 
 const Form = ({ fetchData, currentUser, closeModal }) => {
      const [formData, setFormData] = useState({
-          firstname: currentUser ? currentUser.firstname : '',
-          lastname: currentUser ? currentUser.lastname : '',
-          email: currentUser ? currentUser.email : '',
-          phone: currentUser ? currentUser.phone : '',
-          hobbies: currentUser ? currentUser.hobbies : '',
-          gender: currentUser ? currentUser.gender : '',
-          education: currentUser ? currentUser.education : [],
+          firstname: '',
+          lastname: '',
+          email: '',
+          phone: '',
+          hobbies: '',
+          gender: '',
+          education: [],
      });
 
      const [errors, setErrors] = useState({});
+
+     useEffect(() => {
+          if (currentUser) {
+               setFormData({
+                    firstname: currentUser.firstname || '',
+                    lastname: currentUser.lastname || '',
+                    email: currentUser.email || '',
+                    phone: currentUser.phone || '',
+                    hobbies: currentUser.hobbies || '',
+                    gender: currentUser.gender || '',
+                    education: currentUser.education || [],
+               });
+          }
+     }, [currentUser]);
 
      const validate = (name, value) => {
           let error = '';
@@ -162,7 +176,7 @@ const Form = ({ fetchData, currentUser, closeModal }) => {
                     />
                     Master's
                </div>
-               <button type="submit">Submit</button>
+               <button type="submit">{ currentUser ? "Update" : "Submit" }</button>
           </form>
      );
 };
