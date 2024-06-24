@@ -1,0 +1,12 @@
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}

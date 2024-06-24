@@ -1,0 +1,29 @@
+.toaster {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  z-index: 10000;
+}
+
+.toaster.show {
+  display: block;
+}
+
+.toaster-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toaster-content button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
